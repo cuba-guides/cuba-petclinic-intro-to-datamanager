@@ -23,7 +23,9 @@ public class VisitServiceBean implements VisitService {
 
         Optional<Pet> pet = loadPetByIdentificationNumber(identificationNumber);
 
-        return pet.map(this::createVisitForPet).orElse(null);
+        return pet
+            .map(this::createVisitForPet)
+            .orElse(null);
     }
 
     private Visit createVisitForPet(Pet pet) {

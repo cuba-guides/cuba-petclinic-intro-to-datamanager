@@ -14,15 +14,14 @@ import javax.inject.Inject;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 
-@Service(DiseaseWarningMailingService.NAME)public class DiseaseWarningMailingServiceBean implements DiseaseWarningMailingService {
+@Service(DiseaseWarningMailingService.NAME)
+public class DiseaseWarningMailingServiceBean implements DiseaseWarningMailingService {
 
     @Inject
     protected DataManager dataManager;
 
-
     @Inject
     protected EmailerAPI emailerAPI;
-
 
     @Override
     public int warnAboutDisease(PetType petType, String disease, String city) {
